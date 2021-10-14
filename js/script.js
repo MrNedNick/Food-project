@@ -92,4 +92,20 @@ window.addEventListener('DOMContentLoaded', () => {
     
     setClock('.timer', deadline);
 
+    // Modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+          modal = document.querySelector('.modal'),
+          modalCloseBtn = document.querySelector('[data-close]');
+
+    modalTrigger.forEach(item => {
+        item.addEventListener('click', () => {
+            modal.style.display = 'block'
+        })
+    })
+    modalCloseBtn.addEventListener('click', () => {
+        modal.style.display = 'none'
+    })
+    
+
 });
